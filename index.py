@@ -10,5 +10,10 @@ bot = webdriver.Chrome(service=service)
 bot.maximize_window()
 time.sleep(1)
 
-bot.get("https://www.viajesexito.com/")
-time.sleep(10)
+bot.get("https://www.viajesexito.com")
+time.sleep(40)
+
+closewindow = bot.find_element(By.XPATH, '')
+time.sleep(2)
+closewindow.click()
+time.sleep(3)
