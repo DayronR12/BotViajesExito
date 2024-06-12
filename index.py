@@ -8,12 +8,12 @@ import time
 service = Service("driver/chromedriver.exe")
 bot = webdriver.Chrome(service=service)
 bot.maximize_window()
-time.sleep(1)
+time.sleep(3)
 
-bot.get("https://www.viajesexito.com")
+bot.get("https://www.viajesexito.com/")
 time.sleep(40)
-
-closewindow = bot.find_element(By.XPATH, '')
-time.sleep(2)
+ 
+closewindow = bot.find_element(By.XPATH, '/html/body/div/div/div/div[1]')
+time.sleep(4)
 closewindow.click()
 time.sleep(3)
